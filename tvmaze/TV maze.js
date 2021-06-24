@@ -1,3 +1,4 @@
+header("Content-Security-Policy: upgrade-insecure-requests");
 const form = document.querySelector("#searchForm");
 const TVdiv = document.querySelector("#TVImage");
 const reset = document.querySelector("#reset");
