@@ -1,4 +1,3 @@
-header("Content-Security-Policy: upgrade-insecure-requests");
 const form = document.querySelector("#searchForm");
 const TVdiv = document.querySelector("#TVImage");
 const reset = document.querySelector("#reset");
@@ -22,7 +21,7 @@ form.addEventListener('submit', async function (e) {
 
 const searchTV = async (searchTerm) => {
     const config = { params: { q: searchTerm } };
-    const res = await axios.get("http://api.tvmaze.com/search/shows", config);
+    const res = await axios.get("https://api.tvmaze.com/search/shows", config);
     return res.data;
 }
 
