@@ -10,18 +10,33 @@
 </head>
 <style>
     div {
-        margin: 20px
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .film {
+        display: inline-block;
+    }
+
+    body {
+        margin-top: 20px;
+        margin-left: 50px;
     }
 </style>
 
 <body>
     <h1>TV Maze API</h1>
+    <h2>Click the image to get info!</h2>
     <div>
         <form action="/nowhere" id="searchForm">
-            <label for="TV">Enter TV Show you want below</label>
+            <label for="TV">Enter TV Show you want: </label>
             <input type="text" placeholder="TV show here" id="YV" name="query">
             <button id="search">Search</button>
-            <button type="button" id="reset">Reset</button>
+            <button type="button" id="reset">Reset images</button>
         </form>
     </div>
     <div id="TVImage"></div>

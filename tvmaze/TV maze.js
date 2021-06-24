@@ -35,10 +35,17 @@ const makeImg = (searchResults) => {
         if (result.show.image) {
             const link = document.createElement("a");
             const img = document.createElement("img");
+            const name = document.createElement('p');
+            const film = document.createElement('p');
+            name.innerText = result.show.name;
             img.setAttribute("src", result.show.image.medium);
             link.append(img);
             link.setAttribute("href", result.show.url);
-            TVdiv.append(link);
+            name.classList.add("name");
+            film.classList.add("film");
+            film.append(link);
+            film.append(name);
+            TVdiv.append(film);
         }
     }
 }
